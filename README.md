@@ -1,9 +1,13 @@
 # New Horizons
+This mod adds new items and features To the old mc so you never get bored of it
 
+Secret tip : Play it with your friends to die of laughing :)
 ## Setup
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+It's like every fabric jar mod 
+but incase you don't know, Here:
 
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+STEP 1- download the mod
+STEP 2- move it to %appdata%\.minecraft\mods
+STEP 3- that is all my brothers
+reference : baskota is my friend so i added better biscuits

@@ -19,6 +19,9 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-      itemModelGenerators.generateFlatItem(mah_item.BASKOTA_ORE, ModelTemplates.FLAT_ITEM);
+      itemModelGenerators.generateFlatItem(mah_item.BASKOTA_RAW, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.BASKOTA_COOKED, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.BASKOTA_BURNT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.BASKOTA_FRENDO, ModelTemplates.FLAT_ITEM);
     }
 }

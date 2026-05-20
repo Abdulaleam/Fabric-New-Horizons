@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "new-horizons:item/baskota_ore"
+    "model": "new-horizons:item/baskota_raw"
   }
 }
