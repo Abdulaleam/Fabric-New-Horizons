@@ -13,7 +13,7 @@ import net.rainy.newhorizons.NewHorizons;
 import java.util.function.Function;
 
 public class mah_item {
-    public static  final Item BASKOTA_ORE = registerItem("Baskota ore", Item::new);
+    public static  final Item BASKOTA_ORE = registerItem("baskota_ore", Item::new);
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(NewHorizons.MOD_ID, name),
