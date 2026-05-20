@@ -22,6 +22,16 @@ public class ModCreativeModeTabs {
                         output.accept(mah_item.BASKOTA_BURNT);
                         output.accept(mah_item.BASKOTA_FRENDO);
                         output.accept(ModBlocks.BASKOTA_BLOCK);
+                        output.accept(ModBlocks.COOKED_BLOCK);
+                        output.accept(ModBlocks.BURNT_BLOCK);
+                        output.accept(ModBlocks.BASKOTAFRENDO_BLOCK);
+                        output.accept(ModBlocks.SAMIR_BLOCK);
+                        output.accept(mah_item.SAMIR);
+                        output.accept(mah_item.CRUSHEDOXIDIZED_IRON);
+                        output.accept(mah_item.OXIDIZEDIRON_DUST);
+                        output.accept(mah_item.REDUCED_IRON);
+                        output.accept(mah_item.HYDROGEN_GAS);
+                        output.accept(mah_item.MagicNyaa);
 
 
                     })
@@ -36,6 +46,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.newhorizons.newhorizons_friends"))
                     .displayItems((parameters, output) -> {
                         output.accept(mah_item.BASKOTA_FRENDO);
+                        output.accept(ModBlocks.SAMIR_BLOCK);
+                        output.accept(mah_item.SAMIR);
 
 
                     })

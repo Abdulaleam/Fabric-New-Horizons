@@ -16,6 +16,12 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.BASKOTA_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.COOKED_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.BURNT_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.BASKOTAFRENDO_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.SAMIR_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.HOQA_BLOCK);
+
 
     }
 
@@ -25,5 +31,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(mah_item.BASKOTA_COOKED, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(mah_item.BASKOTA_BURNT, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(mah_item.BASKOTA_FRENDO, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.SAMIR, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.CRUSHEDOXIDIZED_IRON, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.OXIDIZEDIRON_DUST, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.REDUCED_IRON, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.HYDROGEN_GAS, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.MagicNyaa, ModelTemplates.FLAT_HANDHELD_ITEM);
+
     }
 }

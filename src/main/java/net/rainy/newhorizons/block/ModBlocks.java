@@ -18,7 +18,27 @@ public class ModBlocks {
      public static final Block BASKOTA_BLOCK = registerBlock("baskota_block",
              properties -> new Block(properties.strength(4f)
                      .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final Block HOQA_BLOCK = registerBlock("hoka_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
+     public static final Block COOKED_BLOCK = registerBlock("cooked_block",
+             properties -> new Block(properties.strength(4f)
+                     .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+     public static final Block BURNT_BLOCK = registerBlock("burnt_block",
+             properties -> new Block(properties.strength(4f)
+                     .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final Block BASKOTAFRENDO_BLOCK = registerBlock("baskotafrendo_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final Block SAMIR_BLOCK = registerBlock("samir_block",
+            properties -> new Block(properties.strength(0.5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)
+                    .lightLevel(state -> 10)
+                    .ignitedByLava()
+                    .friction(6f)));
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(NewHorizons.MOD_ID, name))));
         registerBlockItem(name, toRegister);
