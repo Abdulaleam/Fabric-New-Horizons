@@ -1,25 +1,27 @@
 package net.rainy.newhorizons.block.custom;
+
 import net.rainy.newhorizons.block.ModBlocks;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.core.registries.BuiltInRegistries;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class MagicNyaa extends Item {
-    private static final Map<Block, Block> MAGIC_MAP =
-            Map.of(
-                    ModBlocks.SAMIR_BLOCK, ModBlocks.COOKED_BLOCK,
-                    ModBlocks.BASKOTA_BLOCK, ModBlocks.COOKED_BLOCK,
-                    Blocks.OAK_LOG,ModBlocks.COOKED_BLOCK,
-                    ModBlocks.COOKED_BLOCK, ModBlocks.BURNT_BLOCK,
-                    Blocks.STONE, ModBlocks.COOKED_BLOCK,
-                    Blocks.DIRT, ModBlocks.COOKED_BLOCK
 
-            );
+    private static final Map<Block, Block> MAGIC_MAP = new HashMap<>();
+
+    static {
+        for (Block block : BuiltInRegistries.BLOCK) {
+            MAGIC_MAP.put(block, ModBlocks.COOKED_BLOCK);
+        }
+
+        MAGIC_MAP.put(ModBlocks.COOKED_BLOCK, ModBlocks.BURNT_BLOCK);
+    }
 
     public MagicNyaa(Properties properties) {
         super(properties);
@@ -34,9 +36,13 @@ public class MagicNyaa extends Item {
         Block clickedBlock = level.getBlockState(context.getClickedPos()).getBlock();
 
         if(MAGIC_MAP.containsKey(clickedBlock) && !level.isClientSide()) {
-            // We are on the Server!
-            level.setBlockAndUpdate(context.getClickedPos(), MAGIC_MAP.get(clickedBlock).defaultBlockState());
-            context.getItemInHand().hurtAndBreak(1, context.getPlayer(), context.getHand());
+            // do i have to make this server sided? idk
+            level.setBlockAndUpdate(context.getClickedPos(),
+                    MAGIC_MAP.get(clickedBlock).defaultBlockState());
+
+            context.getItemInHand().hurtAndBreak(1,
+                    context.getPlayer(),
+                    context.getHand());
         }
 
         return InteractionResult.SUCCESS;

@@ -17,6 +17,10 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.rainy.newhorizons.Item_package.mah_item;
 import net.rainy.newhorizons.block.ModBlocks;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Item;
+
 
 import java.util.concurrent.CompletableFuture;
 
@@ -34,6 +38,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         add(ModBlocks.COOKED_BLOCK, createOreDrop(ModBlocks.COOKED_BLOCK, mah_item.BASKOTA_COOKED));
         add(ModBlocks.BURNT_BLOCK, createOreDrop(ModBlocks.BURNT_BLOCK, mah_item.BASKOTA_BURNT));
         add(ModBlocks.SAMIR_BLOCK, createOreDrop(ModBlocks.SAMIR_BLOCK, mah_item.SAMIR));
+        add(Blocks.AMETHYST_BLOCK,createOreDrop(Blocks.AMETHYST_BLOCK,mah_item.MagicNyaa));
     }
         public LootTable.Builder createMultipleOreDrops(final Block block, Item item , float minDrops, float maxDrops) {
             HolderLookup.RegistryLookup<Enchantment> enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);

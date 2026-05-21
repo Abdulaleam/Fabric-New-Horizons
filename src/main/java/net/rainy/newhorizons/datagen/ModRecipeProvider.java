@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.rainy.newhorizons.Item_package.mah_item;
 import net.rainy.newhorizons.block.ModBlocks;
 
@@ -19,7 +20,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public ModRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
-
+   // This feels so un optimized, but this is the only easy way i found to make this , instead of changing the smelting json and stuff ehh
     @Override
     protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
         return new RecipeProvider(registries,output) {
@@ -30,6 +31,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List<ItemLike> NewV3_SMELTABLES = List.of(Items.POTION);
                 List<ItemLike> NewV4_SMELTABLES = List.of(mah_item.BASKOTA_COOKED);
                 List<ItemLike> NewV2_SMELTABLES = List.of(mah_item.REDUCED_IRON);
+                // HYDROGEN COMES FROM SMELTING WATER BOTTLES?.
+                // I LOVE THE IDEA LETS GOOOOOOOOOOOoooooooo
                 oreSmelting(NewV3_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, mah_item.HYDROGEN_GAS,0.25F,50, "horizons");
                 oreBlasting(NewV3_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, mah_item.HYDROGEN_GAS,0.25F,50, "horizons");
                 oreSmelting(NewV4_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, mah_item.BASKOTA_BURNT,0.25F,50, "horizons");
@@ -43,29 +46,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS,mah_item.BASKOTA_BURNT, RecipeCategory.DECORATIONS, ModBlocks.BURNT_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS,mah_item.BASKOTA_RAW, RecipeCategory.DECORATIONS, ModBlocks.BASKOTA_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS,mah_item.CRUSHEDOXIDIZED_IRON, RecipeCategory.DECORATIONS, mah_item.OXIDIZEDIRON_DUST);
+                // changed it from 8 items needed to 4 idk, should be better and easier.
+                // EHHH IF IT works ima not touch it
               shaped(RecipeCategory.MISC, mah_item.REDUCED_IRON)
                       .pattern("RRR")
                       .pattern("RFR")
-                      .pattern("RRR")
                       .define('R', mah_item.OXIDIZEDIRON_DUST)
                       .define('F', mah_item.HYDROGEN_GAS)
-                      .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
+                      .unlockedBy(getHasName(Blocks.OAK_WOOD),has(mah_item.TREE_BARK))
                       .group("horizons")
                       .save(output);
                 shaped(RecipeCategory.MISC, Items.OAK_WOOD)
                         .pattern("RR")
                         .pattern("RR")
                         .define('R', mah_item.TREE_BARK)
-                        .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
+                        .unlockedBy(getHasName(Blocks.OAK_WOOD),has(mah_item.TREE_BARK))
                         .group("horizons")
                         .save(output,"uhh_oak_but_harder");
+                  // I Wanted to make the recipe available for all people so Idk
                 shaped(RecipeCategory.MISC, Items.COBBLESTONE)
                         .pattern("RR")
                         .pattern("RR")
                         .define('R', mah_item.STONE_DUST)
-                        .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
+                        .unlockedBy(getHasName(Blocks.OAK_WOOD),has(mah_item.TREE_BARK))
                         .group("horizons")
                         .save(output,"uhh_stone_but_harder");
+                 // SHOULD I make for diamonds too ehhh
                   shapeless(RecipeCategory.MISC,mah_item.SAMIR,9)
                           .requires(ModBlocks.SAMIR_BLOCK)
                           .unlockedBy(getHasName(mah_item.SAMIR),has(ModBlocks.SAMIR_BLOCK))
@@ -86,6 +92,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
                         .group("horizons")
                         .save(output, "recipe_5_will_i_need_this_name_later_");
+                // APPARENTLY Idk but i think i cant have duplicate Recipes so i gotta give each an id?
             }
         };
     }

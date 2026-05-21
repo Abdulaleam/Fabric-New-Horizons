@@ -21,10 +21,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.BASKOTAFRENDO_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.SAMIR_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.HOQA_BLOCK);
+        // Lol added my friends as fun
+        // What is minecraft without friends?
 
 
     }
-
+// My lovely page that i wasted 30 mins not knwoing the error
+    // turns out i had added the same item twice SIGH . FIXED
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
       itemModelGenerators.generateFlatItem(mah_item.BASKOTA_RAW, ModelTemplates.FLAT_ITEM);
@@ -39,6 +42,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(mah_item.MagicNyaa, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(mah_item.TREE_BARK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(mah_item.STONE_DUST, ModelTemplates.FLAT_ITEM);
+        // I feel too evil rn , IT takes ages to get iron now.
 
     }
 }
