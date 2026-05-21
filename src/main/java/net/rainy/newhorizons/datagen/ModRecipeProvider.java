@@ -11,11 +11,6 @@ import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
 import net.rainy.newhorizons.Item_package.mah_item;
 import net.rainy.newhorizons.block.ModBlocks;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -32,7 +27,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             public void buildRecipes() {
                 List<ItemLike> New_SMELTABLES = List.of(mah_item.BASKOTA_FRENDO, mah_item.BASKOTA_RAW,
                         mah_item.SAMIR);
-                List<ItemLike> NewV3_SMELTABLES = List.of(Items.WATER_BUCKET);
+                List<ItemLike> NewV3_SMELTABLES = List.of(Items.POTION);
                 List<ItemLike> NewV4_SMELTABLES = List.of(mah_item.BASKOTA_COOKED);
                 List<ItemLike> NewV2_SMELTABLES = List.of(mah_item.REDUCED_IRON);
                 oreSmelting(NewV3_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, mah_item.HYDROGEN_GAS,0.25F,50, "horizons");
@@ -46,6 +41,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS,mah_item.BASKOTA_COOKED, RecipeCategory.DECORATIONS, ModBlocks.COOKED_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS,mah_item.SAMIR, RecipeCategory.DECORATIONS, ModBlocks.SAMIR_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS,mah_item.BASKOTA_BURNT, RecipeCategory.DECORATIONS, ModBlocks.BURNT_BLOCK);
+                nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS,mah_item.BASKOTA_RAW, RecipeCategory.DECORATIONS, ModBlocks.BASKOTA_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS,mah_item.CRUSHEDOXIDIZED_IRON, RecipeCategory.DECORATIONS, mah_item.OXIDIZEDIRON_DUST);
               shaped(RecipeCategory.MISC, mah_item.REDUCED_IRON)
                       .pattern("RRR")
@@ -56,11 +52,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                       .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
                       .group("horizons")
                       .save(output);
-                  shapeless(RecipeCategory.MISC,mah_item.CRUSHEDOXIDIZED_IRON,9)
-                          .requires(mah_item.OXIDIZEDIRON_DUST)
-                          .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
+                shaped(RecipeCategory.MISC, Items.OAK_WOOD)
+                        .pattern("RR")
+                        .pattern("RR")
+                        .define('R', mah_item.TREE_BARK)
+                        .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
+                        .group("horizons")
+                        .save(output,"uhh_oak_but_harder");
+                shaped(RecipeCategory.MISC, Items.COBBLESTONE)
+                        .pattern("RR")
+                        .pattern("RR")
+                        .define('R', mah_item.STONE_DUST)
+                        .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
+                        .group("horizons")
+                        .save(output,"uhh_stone_but_harder");
+                  shapeless(RecipeCategory.MISC,mah_item.SAMIR,9)
+                          .requires(ModBlocks.SAMIR_BLOCK)
+                          .unlockedBy(getHasName(mah_item.SAMIR),has(ModBlocks.SAMIR_BLOCK))
                           .group("horizons")
-                          .save(output, "iron_fromandrecipe_stick");
+                          .save(output, "second_recipe_hehehe");
+                shapeless(RecipeCategory.MISC,mah_item.BASKOTA_COOKED,9)
+                        .requires(ModBlocks.COOKED_BLOCK)
+                        .unlockedBy(getHasName(mah_item.BASKOTA_COOKED),has(ModBlocks.COOKED_BLOCK))
+                        .group("horizons")
+                        .save(output, "recipe_3_brh_im_tired");
+                shapeless(RecipeCategory.MISC,mah_item.BASKOTA_BURNT,9)
+                        .requires(ModBlocks.BURNT_BLOCK)
+                        .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
+                        .group("horizons")
+                        .save(output, "recipe_4_im_happy");
+                shapeless(RecipeCategory.MISC,mah_item.BASKOTA_RAW,9)
+                        .requires(ModBlocks.BASKOTA_BLOCK)
+                        .unlockedBy(getHasName(mah_item.OXIDIZEDIRON_DUST),has(mah_item.CRUSHEDOXIDIZED_IRON))
+                        .group("horizons")
+                        .save(output, "recipe_5_will_i_need_this_name_later_");
             }
         };
     }

@@ -37,6 +37,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(mah_item.REDUCED_IRON, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(mah_item.HYDROGEN_GAS, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(mah_item.MagicNyaa, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.TREE_BARK, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(mah_item.STONE_DUST, ModelTemplates.FLAT_ITEM);
 
     }
 }

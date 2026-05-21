@@ -32,6 +32,9 @@ public class ModCreativeModeTabs {
                         output.accept(mah_item.REDUCED_IRON);
                         output.accept(mah_item.HYDROGEN_GAS);
                         output.accept(mah_item.MagicNyaa);
+                        output.accept(mah_item.HYDROGEN_GAS);
+                        output.accept(mah_item.TREE_BARK);
+                        output.accept(mah_item.STONE_DUST);
 
 
                     })
