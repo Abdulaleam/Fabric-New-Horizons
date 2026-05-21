@@ -29,7 +29,7 @@ public class MagicNyaa extends Item {
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        // Right Click Block
+        // Right Click Block to COOKIFY IT ima make everrything a cookie
         // IT WILL MAKE IT A COOKIE hehe raIny
 
         Level level = context.getLevel();
