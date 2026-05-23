@@ -4,20 +4,39 @@ import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.rainy.newhorizons.NewHorizons;
 import net.rainy.newhorizons.block.custom.MagicNyaa;
 import net.rainy.newhorizons.food.ModFoods;
 
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class mah_item {
     public static  final Item BASKOTA_RAW = registerItem("baskota_raw", Item::new);
-    public static  final Item BASKOTA_COOKED = registerItem("baskota_cooked", properties -> new Item(properties.food( ModFoods.BASKOTA_RAW,ModFoods.BASKOTA_COOKED)));
-    public static  final Item BASKOTA_BURNT = registerItem("baskota_burnt", properties -> new Item(properties.food(ModFoods.BASKOTA_RAW,ModFoods.BASKOTA_BURNT)));
+    public static  final Item BASKOTA_COOKED = registerItem("baskota_cooked", properties -> new Item(properties.food( ModFoods.BASKOTA_RAW,ModFoods.BASKOTA_COOKED))
+    {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.newhorizons.goodbaskota"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+    public static  final Item BASKOTA_BURNT = registerItem("baskota_burnt", properties -> new Item(properties.food(ModFoods.BASKOTA_RAW,ModFoods.BASKOTA_BURNT))
+    {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.newhorizons.badbaskota"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
     public static  final Item BASKOTA_FRENDO = registerItem("baskota_frendo", Item::new);
     public static  final Item SAMIR = registerItem("samir", Item::new);
     public static  final Item CRUSHEDOXIDIZED_IRON = registerItem("crushedoxidized_iron", Item::new);

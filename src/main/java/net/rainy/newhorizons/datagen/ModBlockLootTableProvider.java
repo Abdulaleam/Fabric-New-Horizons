@@ -33,6 +33,8 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     public void generate() {
         dropSelf(ModBlocks.SAMIR_BLOCK);
         dropSelf(ModBlocks.HOQA_BLOCK);
+        dropSelf(ModBlocks.REDUCER);
+        // Yay the Reducer is done tada!!! i feel happy
 
         add(ModBlocks.BASKOTA_BLOCK, createOreDrop(ModBlocks.BASKOTA_BLOCK, mah_item.BASKOTA_RAW));
         add(ModBlocks.COOKED_BLOCK, createOreDrop(ModBlocks.COOKED_BLOCK, mah_item.BASKOTA_COOKED));

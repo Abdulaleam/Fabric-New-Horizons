@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_baskota_frendo": {
+      "conditions": {
+        "items": [
+          {
+            "items": "new-horizons:baskota_frendo"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "new-horizons:baskota_cooked_from_blasting_baskota_frendo"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_baskota_frendo"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "new-horizons:baskota_cooked_from_blasting_baskota_frendo"
+    ]
+  }
+}

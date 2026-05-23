@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 50,
+  "experience": 0.25,
+  "group": "horizons",
+  "ingredient": "new-horizons:baskota_raw",
+  "result": {
+    "id": "new-horizons:baskota_cooked"
+  }
+}

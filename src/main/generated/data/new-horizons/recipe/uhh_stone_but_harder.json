@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "horizons",
+  "key": {
+    "R": "new-horizons:stone_dust"
+  },
+  "pattern": [
+    "RR",
+    "RR"
+  ],
+  "result": {
+    "id": "minecraft:cobblestone"
+  }
+}

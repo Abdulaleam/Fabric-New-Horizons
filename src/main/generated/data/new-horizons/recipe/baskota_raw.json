@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "new-horizons:baskota_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "new-horizons:baskota_raw"
+  }
+}

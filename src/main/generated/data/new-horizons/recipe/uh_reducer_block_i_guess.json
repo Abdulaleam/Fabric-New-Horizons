@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "horizons",
+  "key": {
+    "F": "new-horizons:hydrogen_gas",
+    "R": "minecraft:glass"
+  },
+  "pattern": [
+    "RRR",
+    "RFR",
+    "RRR"
+  ],
+  "result": {
+    "id": "new-horizons:reducer"
+  }
+}

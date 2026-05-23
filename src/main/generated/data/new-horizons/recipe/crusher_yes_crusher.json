@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "horizons",
+  "key": {
+    "F": "minecraft:glass",
+    "R": "minecraft:cobblestone"
+  },
+  "pattern": [
+    "RRR",
+    "RFR",
+    "RRR"
+  ],
+  "result": {
+    "id": "new-horizons:crusher"
+  }
+}

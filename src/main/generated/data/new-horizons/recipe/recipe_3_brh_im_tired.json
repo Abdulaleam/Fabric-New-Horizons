@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "horizons",
+  "ingredients": [
+    "new-horizons:cooked_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "new-horizons:baskota_cooked"
+  }
+}

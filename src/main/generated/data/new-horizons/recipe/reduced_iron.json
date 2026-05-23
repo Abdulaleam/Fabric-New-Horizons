@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "horizons",
+  "key": {
+    "F": "new-horizons:hydrogen_gas",
+    "R": "new-horizons:oxidizediron_dust"
+  },
+  "pattern": [
+    "RRR",
+    "RFR"
+  ],
+  "result": {
+    "id": "new-horizons:reduced_iron"
+  }
+}

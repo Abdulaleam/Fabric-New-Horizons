@@ -93,6 +93,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("horizons")
                         .save(output, "recipe_5_will_i_need_this_name_later_");
                 // APPARENTLY Idk but i think i cant have duplicate Recipes so i gotta give each an id?
+                shaped(RecipeCategory.MISC, ModBlocks.REDUCER)
+                        .pattern("RRR")
+                        .pattern("RFR")
+                        .pattern("RRR")
+                        .define('R', Blocks.GLASS)
+                        .define('F', mah_item.HYDROGEN_GAS)
+                        .unlockedBy(getHasName(Blocks.GLASS),has(mah_item.TREE_BARK))
+                        .group("horizons")
+                        .save(output,"uh_reducer_block_i_guess");
+                shaped(RecipeCategory.MISC, ModBlocks.CRUSHER)
+                        .pattern("RRR")
+                        .pattern("RFR")
+                        .pattern("RRR")
+                        .define('R', Blocks.COBBLESTONE)
+                        .define('F', Blocks.GLASS)
+                        .unlockedBy(getHasName(Blocks.DIRT),has(mah_item.TREE_BARK))
+                        .group("horizons")
+                        .save(output,"crusher_yes_crusher");
             }
         };
     }

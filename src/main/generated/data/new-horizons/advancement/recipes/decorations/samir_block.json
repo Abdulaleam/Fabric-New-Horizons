@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_samir": {
+      "conditions": {
+        "items": [
+          {
+            "items": "new-horizons:samir"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "new-horizons:samir_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_samir"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "new-horizons:samir_block"
+    ]
+  }
+}

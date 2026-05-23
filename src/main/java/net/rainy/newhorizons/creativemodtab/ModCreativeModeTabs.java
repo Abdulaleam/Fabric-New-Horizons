@@ -34,6 +34,8 @@ public class ModCreativeModeTabs {
                         output.accept(mah_item.HYDROGEN_GAS);
                         output.accept(mah_item.TREE_BARK);
                         output.accept(mah_item.STONE_DUST);
+                        output.accept(ModBlocks.REDUCER);
+                        output.accept(ModBlocks.CRUSHER);
 
 
                     })
@@ -50,6 +52,8 @@ public class ModCreativeModeTabs {
                         output.accept(mah_item.BASKOTA_FRENDO);
                         output.accept(ModBlocks.SAMIR_BLOCK);
                         output.accept(mah_item.SAMIR);
+                        output.accept(ModBlocks.HOQA_BLOCK);
+                        output.accept(ModBlocks.BASKOTAFRENDO_BLOCK);
 
 
                     })

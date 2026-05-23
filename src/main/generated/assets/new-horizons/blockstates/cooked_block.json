@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "new-horizons:block/cooked_block"
+    }
+  }
+}

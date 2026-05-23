@@ -1,5 +1,10 @@
 package net.rainy.newhorizons.block.custom;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.rainy.newhorizons.block.ModBlocks;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
@@ -10,6 +15,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Consumer;
 
 public class MagicNyaa extends Item {
 
@@ -46,5 +52,20 @@ public class MagicNyaa extends Item {
         }
 
         return InteractionResult.SUCCESS;
+
+    }
+
+    @Override
+    public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+        if (Minecraft.getInstance().hasShiftDown()){
+            builder.accept(Component.translatable("tooltip.new-horizons.magicnyaa.shift_down"));
+
+        }else {
+            builder.accept(Component.translatable("tooltip.new-horizons.magicnyaa"));
+
+        }
+
+
+        super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
     }
 }

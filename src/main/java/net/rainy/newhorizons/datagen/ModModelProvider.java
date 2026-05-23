@@ -21,6 +21,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.BASKOTAFRENDO_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.SAMIR_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.HOQA_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.REDUCER);
+        blockModelGenerators.createTrivialCube(ModBlocks.CRUSHER);
         // Lol added my friends as fun
         // What is minecraft without friends?
 

@@ -9,7 +9,7 @@
   "item.new-horizons.reduced_iron": "Reduced Iron ",
   "item.new-horizons.hydrogen_gas": "Hydrogen Gas",
   "item.new-horizons.magicnyaa": "Magic Nyaa",
-  "item.new-horizons.tree_bark": "Tree Bark?",
+  "item.new-horizons.tree_bark": "§4Tree§r Bark?",
   "item.new-horizons.stone_dust": "Stonee dust",
 
   "creativemodetab.newhorizons.newhorizons_items": "NEW Horizons Items",
@@ -19,8 +19,14 @@
   "block.new-horizons.cooked_block": "Block Of Perfect BASKOTA",
   "block.new-horizons.burnt_block": "Block Of AWFUL Burnt BASKOTA",
   "block.new-horizons.samir_block": "I'M SAMIRRR, i fly",
-  "block.new-horizons.hoka_block": "I'M 7oQA , iM BOOTIFUAL"
-
-
-
+  "block.new-horizons.hoka_block": "I'M 7oQA , iM BOOTIFUAL",
+  "tooltip.newhorizons.goodbaskota": "This thing is damn §9Delicous§r",
+  "tooltip.newhorizons.badbaskota": "§4Awful§r, Just like my Cooking :)",
+  "tooltip.mahmod.samirfriend": "Samir hates being Walked on , §2Seriously§r Don't do it",
+  "tooltip.mahmod.perfectfood": "Try breaking it, it should drop something delicious",
+  "tooltip.mahmod.baskotafriend": "Hi Friend",
+  "tooltip.new-horizons.magicnyaa.shift_down": "Let's turn the world INTO A §aCOOKIE§r",
+  "tooltip.new-horizons.magicnyaa": "Press §cShift§r For more info",
+  "block.new-horizons.reducer": "§cReducer§r",
+  "block.new-horizons.crusher": "§4Crusher§r"
 }
