@@ -94,7 +94,7 @@ public class ModBlocks {
 
     public static void registerModBlocks(){
 
-        NewHorizons.LOGGER.info("Registering Mod Blocks for"+ NewHorizons.MOD_ID);
+        NewHorizons.LOGGER.info("Registering my own Block lets go"+ NewHorizons.MOD_ID);
     }
 
 
