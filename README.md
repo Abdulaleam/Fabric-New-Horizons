@@ -1,10 +1,11 @@
 # New Horizons
 
 **A chaotic survival overhaul that completely changes early-game Minecraft progression.**
+// The sentence above is ai made just that.
 
 Forget getting iron on day one or instantly turning trees into planks. This mod slows progression down with strange crafting systems, cursed mechanics, and questionable science.
 
-Built for players who want survival to feel fresh, longer, and much more chaotic with friends.
+Built for players who want survival to feel new , longer, and much more chaotic with friends.
 
 # Iron Progression
 
@@ -14,11 +15,12 @@ To create iron ingots, you must go through a full reduction process:
 
 Boil water bottles to obtain Hydrogen Gas
 Mine iron ore to receive Oxidized Crushed Iron
-Convert it into Oxidized Iron Dust
-Combine the dust with Hydrogen to create Reduced Iron
+Convert it into Oxidized Iron Dust Or perferly use the Crusher Machine.
+Combine the dust with Hydrogen to create Reduced Iron , or preferly use the Reducer machine.
 Smelt Reduced Iron into Iron Ingots
 
-You may also attempt “friendly interactions” with iron golems.
+You may also attempt “friendly interactions” with iron golems to get iron ingots :) .
+hehe no violence, we are child friendly .
 
 # Wood Progression
 
@@ -64,12 +66,12 @@ What This Mod Is About
 
 New Horizons is designed to make Minecraft progression:
 
-Longer
-More experimental
-More difficult
-More ridiculous
+Feel alot Longer and more fun.
+More experimental.
+More difficult.
+More ridiculous.
 
-The mod mixes survival gameplay with intentionally cursed mechanics to create a unique progression experience.
+The mod mixes survival gameplay with intentionally cursed mechanics to create a unique progression experience. aka (TO RAGE BAIT THE PLAYERS MUAHHHAHA)
 
 Recommended Experience
 
