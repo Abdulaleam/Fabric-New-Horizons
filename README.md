@@ -1,7 +1,6 @@
 # New Horizons
 
-**A chaotic survival overhaul that completely changes early-game Minecraft progression.**
-// The sentence above is ai made just that.
+**A chaotic survival overhaul that completely changes early-game Minecraft progression.** ps note: Yo lowkey some chat bot on slack gave me this cool sentence so i copied it 🥇 lets go free source :)   )
 
 Forget getting iron on day one or instantly turning trees into planks. This mod slows progression down with strange crafting systems, cursed mechanics, and questionable science.
 
